@@ -1,0 +1,5 @@
+# Ignore everything
+*
+
+# Allow war/jar files in subdirectory named "target"
+!target/*.jar

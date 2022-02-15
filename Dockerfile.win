@@ -1,0 +1,7 @@
+FROM openjdk:8u275-jre-nanoserver
+
+WORKDIR /opt/mailbyms
+
+ADD ./target/drone-dingtalk-message-0.0.1-SNAPSHOT.jar ./
+
+ENTRYPOINT [ "java", "-jar", "drone-dingtalk-message-0.0.1-SNAPSHOT.jar" ]
