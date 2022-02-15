@@ -1,0 +1,24 @@
+version: '3'
+
+services:
+  dingtalk:
+    image: mailbyms/drone-dingtalk-message
+    environment:
+      TZ: Asia/Shanghai
+      PLUGIN_TOKEN: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+      PLUGIN_TYPE: markdown
+      DRONE_BUILD_EVENT: tag
+      DRONE_BUILD_STATUS: success #failure or success
+      DRONE_REPO: windows/Test-project
+      DRONE_REPO_NAME: Test-project
+      DRONE_TAG: 1.0.0
+      DRONE_STAGE_NAME: first_stage
+      DRONE_STAGE_STARTED: 12
+      DRONE_STAGE_FINISHED: 100
+      #DRONE_COMMIT_AUTHOR: mailbyms
+      DRONE_COMMIT_AUTHOR_EMAIL: mailbyms@mail.com
+      DRONE_COMMIT_MESSAGE: helloworld
+      DRONE_COMMIT_SHA: f8cdef227237a2179fbbc45cee21a1d4a28d5511
+      DRONE_COMMIT_LINK: http://a.b.c
+      DRONE_BUILD_LINK: http://a.b.com
+
